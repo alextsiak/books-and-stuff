@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<body class="search-landing">
+	<div class="navbar">
+		<div class="nav-item">
+			<a href="{{ url_for('search') }}"><img src="static/logo.png" alt="Site logo" height="50em"></a>
+		</div>
+		<ul class="nav-links">
+			<li class="nav-item">Welcome, <span style="font-weight: 900;">{{ session['username'] }}</span>!</li>
+			<li class="nav-item"><a href="{{ url_for('search') }}">Search</a></li>
+			<li class="nav-item"><a href="{{ url_for('logout') }}">Log out</a></li>
+		</ul>
+	</div>
+
+	<h1 style="margin-top: 7em;">Search for a book!</h1>
+	<form class="search-field" action="" method="post">
+			<input style="height: 2em; width: 100%;" type="text" name="search-term" placeholder="Title, author, ISBN"></input>
+			<button><img src="static/search.svg"></button>
+	</form>
+</body>
+{% endblock %}

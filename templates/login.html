@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block body %}
+	<div class="main-logo">
+		<a href="{{ url_for('index') }}"><img src="static/logo.png" class="logo-landing" alt="Site logo"></a>
+	</div>
+	<div class="signup-form">
+		<form action="login" method="post">
+			<p>Username:</p>
+			<input type="text" name="name">
+			<p>Password:</p>
+			<input type="password" name="password">
+			<button class="form-button">Log In</button>
+		</form>
+	</div>
+	<p> {{ message }} </p>
+{% endblock %}

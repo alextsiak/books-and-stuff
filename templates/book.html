@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<body class="search-body">
+	<div class="navbar">
+		<div class="nav-item">
+			<a href="{{ url_for('search') }}"><img src="{{ url_for('static', filename='logo.png') }}" alt="Site logo" height="50em"></a>
+		</div>
+		<ul class="nav-links">
+			<li class="nav-item">Welcome, <span style="font-weight: 900;">{{ session['username'] }}</span>!</li>
+			<li class="nav-item"><a href="{{ url_for('search') }}">Search</a></li>
+			<li class="nav-item"><a href="{{ url_for('logout') }}">Log out</a></li>
+		</ul>
+	</div>
+		<h1>{{book.title}}</h1>
+	<div class="info">
+		<h4><strong>Author:</strong> {{ book.author }}</h4>
+		<h4><strong>Publication year:</strong> {{ book.year }}</h4>
+		<h4><strong>ISBN:</strong> {{ book.isbn }}</h4>
+		<h4><strong>Average rating by Goodreads:</strong> {{ average }}</h4>
+	</div>
+	<div class="reviews">
+		<h2>Reviews</h2>
+		<form class="review-form" action="{{ url_for('book', book_id=book.id) }}" method="post">
+			<textarea rows="4" cols="75" name="content" placeholder="Your review here!"></textarea>
+			Rating:
+			<select style="width: 25%" name="rating">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</select>
+			<button style="width: 25%;">Submit</button>
+		</form>
+		{% for review in reviews %}
+		<div class="review">
+			<div class="review-name">
+				{{review.username}}
+			</div>
+			<div class="review-rating">
+				Rating: {{review.rating}}
+			</div>
+			<div class="review-content">
+				{{review.content}}
+			</div>
+			
+		</div>
+		{% endfor %}
+	</div>
+</body>
+{% endblock %}

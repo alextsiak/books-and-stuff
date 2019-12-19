@@ -1,0 +1,217 @@
+html, body {
+	height: 100%;
+	margin: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #F7EBEC;
+	font-family: 'Lato', sans-serif;
+	color: #594a4e;
+}
+
+.search-landing {
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.search-body {
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.navbar {
+	background-color: #F7EBEC;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav-links {
+	display: flex;
+	font-size: 1.20em;
+	justify-content: space-around;
+}
+
+.nav-item {
+	padding: 1em;
+	font-weight: 700;
+}
+
+ul {
+	list-style-type: none;
+}
+
+
+.logo-landing {
+	height: 5.5em;
+	margin-bottom: 3em;
+}
+
+a {
+	text-decoration: none;
+	color: #33272a;
+}
+
+button {
+	background-color: #ff877f;
+	border: solid;
+	border-radius: 5px;
+	border-color: #ff877f;
+	color: black;
+	padding: 0.5em;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 17px;
+	cursor: pointer;
+
+}
+
+
+button:hover {
+	background-color: #FED9CA;
+	border-color: #FED9CA;
+}
+
+
+.landing-buttons {
+	text-align: center;
+
+}
+
+.signup-form {
+	display: flex;
+	flex-direction: column;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+.review-form {
+	display: flex;
+	flex-direction: column;
+}
+
+
+form button {
+	margin-top: 2.5em;
+}
+
+h1 {
+	font-family: 'Crete Round', serif;
+	font-size: 2.5em;
+	color: #33272a;
+	margin-top: 1em;
+}
+
+h2 {
+	font-family: 'Crete Round', serif;
+	font-size: 1.75em;
+	color: #33272a;
+}
+
+
+
+.search-field {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.search-field button {
+	background-color: inherit;
+	border: none;
+	position: absolute;
+	right: 0;
+	bottom: -5%;
+}
+
+.book-result {
+	width: 50%;
+	margin-top: 1em;
+	margin-bottom: 2em;
+	border-bottom: 1px solid lightgrey;
+}
+
+.info {
+	margin-top: 1em;
+	border-top: 1px solid lightgrey;
+	border-bottom: 1px solid lightgrey;
+}
+
+.reviews {
+	margin-top: 7%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.reviews input {
+	height: 200%;
+}
+
+.review-form button {
+	margin: auto;
+}
+
+textarea {
+	resize: none;
+}
+
+.review {
+	width: 100%;
+	margin-top: 2em;
+	margin-bottom: 1em;
+	border-top: 1px solid lightgrey;
+	border-bottom: 1px solid lightgrey;
+
+}
+
+.review-name {
+	margin-right: auto;
+	font-weight: bold;
+}
+
+.review-rating {
+	margin-bottom: 2em;
+	font-style: italic;
+}
+
+
+table, th, td {
+	border-collapse: collapse;
+    border-style: solid;
+    border-color: lightgrey;
+    border-width: 1px;
+    padding: 20px;
+} 
+
+th {
+	background-color: #ff877f;
+	font-weight: 700;
+}
+
+.star {
+	height: 1.5em;
+	width: 1.5em;
+	background: url(star-outline.svg) no-repeat;
+}
+
+
+.stars {
+	display: flex;
+	flex-direction: row;
+	margin-top: 2em;
+}
+

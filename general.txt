@@ -1,0 +1,7 @@
+Color palette: https://colorhunt.co/palette/137927
+
+FOR REGISTRATION:
+
+1) create table 'users' DONE
+2) insert form data to table (username and password) DONE
+PROBLEMS: should the password be stored as plain text?? probably not. but what do?? and how do???? SOLUTION: don't do, who gives a fuck about backend
