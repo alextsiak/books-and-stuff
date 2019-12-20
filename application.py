@@ -106,8 +106,6 @@ def book(book_id):
 
 	#DisplayReviews
 	reviews = db.execute("SELECT * FROM reviews WHERE book_isbn = :book_id", {"book_id": book_id}).fetchall()
-	if reviews == []:
-		reviews = "No reviews yet."
 
 	#PostReviews
 	if request.method == 'POST':
